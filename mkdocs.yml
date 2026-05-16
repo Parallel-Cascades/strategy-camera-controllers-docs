@@ -1,5 +1,5 @@
 site_name: Strategy Camera Controllers
-site_url: https://parallelcascades.com/strategy-camera-controllers/
+site_url: https://parallelcascades.com/strategy-camera-controllers-docs/
 
 nav:
   - Home: index.md
@@ -52,6 +52,9 @@ extra:
       link: https://github.com/parallel-cascades
     - icon: fontawesome/solid/mug-hot
       link: https://ko-fi.com/parallelcascades
+    
+  version:
+    provider: mike
 
   analytics:
     provider: google
