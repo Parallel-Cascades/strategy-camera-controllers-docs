@@ -1,0 +1,89 @@
+site_name: Strategy Camera Controllers
+site_url: https://parallelcascades.com/strategy-camera-controllers/
+
+nav:
+  - Home: index.md
+  - Quick Setup: get-started.md
+  - Camera Controllers:
+    - cameras/index.md
+    - Classic RTS Camera: cameras/classic-rts-camera.md
+    - Simulation Camera: cameras/simulation-camera.md
+    - Tactical War Camera: cameras/tactical-war-camera.md
+  - Advanced Features:
+    - advanced/index.md
+    - Camera Bounds: advanced/camera-bounds.md
+    - Automatic Elevation Adjustment: advanced/auto-elevation.md
+    - Cursor System: advanced/cursor-system.md
+    - UI Pause Integration: advanced/ui-integration.md
+    - Input Remapping: advanced/input-remapping.md
+  - Known Issues: known-issues.md
+  - Changelog: changelog.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/images/logo.png
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+    - navigation.indexes
+
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://parallelcascades.com
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@ParallelCascades
+    - icon: fontawesome/brands/github
+      link: https://github.com/parallel-cascades
+    - icon: fontawesome/solid/mug-hot
+      link: https://ko-fi.com/parallelcascades
+
+  analytics:
+    provider: google
+    property: G-DS7NFYR412
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://parallelcascades.com" target="_blank" rel="noopener">feedback form</a>.
+
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of the documentation and whether users
+      find what they're searching for. With your consent, you're helping to
+      make this documentation better.
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
