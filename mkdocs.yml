@@ -9,6 +9,10 @@ nav:
     - Classic RTS Camera: cameras/classic-rts-camera.md
     - Simulation Camera: cameras/simulation-camera.md
     - Tactical War Camera: cameras/tactical-war-camera.md
+  - Minimaps:
+    - minimaps/index.md
+    - UGUI Minimap: minimaps/ugui-minimap.md
+    - UIToolkit Minimap: minimaps/uitoolkit-minimap.md
   - Advanced Features:
     - advanced/index.md
     - Camera Bounds: advanced/camera-bounds.md
@@ -16,6 +20,7 @@ nav:
     - Cursor System: advanced/cursor-system.md
     - UI Pause Integration: advanced/ui-integration.md
     - Input Remapping: advanced/input-remapping.md
+    - Cursor Over UI Detection: advanced/cursor-over-ui-state.md
   - Known Issues: known-issues.md
   - Changelog: changelog.md
 

@@ -62,5 +62,6 @@ Cursor textures have to be 32x32 pixels, mipmaps disable, read/write enabled, al
 
 ## Related
 
+- [Cursor Over UI Detection](cursor-over-ui-state.md)
 - [Simulation Camera](../cameras/simulation-camera.md)
 - [Quick Setup](../get-started.md)
