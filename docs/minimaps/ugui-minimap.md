@@ -54,6 +54,8 @@ You can adjust the Render Texture resolution to get the fidelity you need - larg
 
 ### MinimapCameraBinderUGUI
 
+Found on the `UI Canvas > Minimap Image` game object.
+
 | Field | Description |
 |---|---|
 | **Minimap Rect** | The `RectTransform` of the Minimap Image |
@@ -61,6 +63,8 @@ You can adjust the Render Texture resolution to get the fidelity you need - larg
 | **Input Button** | Mouse button used to interact with the minimap (default: Left) |
 
 ### UGUICameraInputBlocker
+
+Found on the `UI Canvas > Minimap Image` game object.
 
 | Field | Description |
 |---|---|
