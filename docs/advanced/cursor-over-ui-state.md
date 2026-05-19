@@ -31,9 +31,16 @@ Right-click in the Project window and choose:
 
 Optionally assign a cursor texture - you might want a normal arrow cursor here to override any custom camera cursor that was active just before the pointer moved over the UI. Leaving the texture field empty falls back to the system default cursor.
 
-### 2. Add UGUICameraInputBlocker to the UI element
+### 2. Add an input blocker component to the UI element
 
-Add the `UGUICameraInputBlocker` component to the root of the UGUI element that should block camera input (for example, the minimap image).
+Two components are provided depending on your UI system:
+
+| Component | Use with |
+|---|---|
+| `UGUICameraInputBlocker` | UGUI (`Canvas`-based) elements |
+| `UIToolkitCameraInputBlocker` | UI Toolkit (`UIDocument`-based) elements |
+
+Add the appropriate component to the root of the UI element that should block camera input (for example, the minimap image or panel).
 
 Wire up the three fields in the inspector:
 
@@ -43,29 +50,15 @@ Wire up the three fields in the inspector:
 | **Default Cursor State SO** | The `CursorStateSO` to restore when the pointer leaves the element (typically your default `SingleCursorStateSO`) |
 | **Over UI Cursor State** | The `OverUICursorState` asset created in step 1 |
 
-The UGUI element must be able to receive pointer events. If the element is an `Image`, ensure **Raycast Target** is enabled on it.
-
----
-
-## Cursor Texture
-
-Because `OverUICursorState` extends `SingleCursorStateSO` you can assign any cursor texture to it, or leave it empty to keep the system default. A few common choices:
-
-- **Empty (system default)** - the OS arrow cursor appears while over UI.
-- **Same texture as your default camera cursor** - no visible change when entering the UI area.
-- **A distinct UI cursor** - a hand pointer or similar, to give extra visual feedback that camera controls are suspended.
+For UGUI elements, the element must be able to receive pointer events. If the element is an `Image`, ensure **Raycast Target** is enabled on it.
 
 ---
 
 ## Difference from CameraControlStateSO
 
-`OverUICursorState` and [`CameraControlStateSO`](ui-integration.md) both pause camera input, but they are designed for different scenarios:
+[`CameraControlStateSO`](ui-integration.md) fully pauses the camera - position, rotation, and zoom all freeze. Use it when the camera should be completely inert, such as during a pause menu.
 
-| | `OverUICursorState` + `UGUICameraInputBlocker` | `CameraControlStateSO` |
-|---|---|---|
-| **Trigger** | Pointer hovering over a specific UGUI element | Explicit call from game logic (menu opened, scene transition, etc.) |
-| **Scope** | Automatic, hover-based, per-element | Manual, applies globally |
-| **Typical use** | Minimap, HUD panels that overlap the game view | Pause menus, inventory screens, cutscenes |
+`OverUICursorState` only stops gathering new input. The camera still applies its current movement state each frame, so any in-progress pan or rotation interpolates smoothly to a stop rather than cutting off abruptly. This also means you can still move the camera programmatically while the cursor is over UI - for example, binding the camera position to a minimap click without fighting the input system.
 
 ---
 
@@ -73,3 +66,4 @@ Because `OverUICursorState` extends `SingleCursorStateSO` you can assign any cur
 
 - [Cursor System](cursor-system.md)
 - [UI Integration](ui-integration.md)
+- [Minimaps](../minimaps/index.md)
