@@ -2,7 +2,7 @@
 
 Strategy Camera Controllers is a collection of Unity camera controllers built on Unity's Input System. Designed to be modular and extensible, these controllers are ready to drop into any project for rapid prototyping or to serve as a foundation for fully custom camera systems.
 
-[Quick Setup](./get-started.md){ .md-button .md-button--primary } [Asset Store](https://assetstore.unity.com/preview/370822/1354926){ .md-button .md-button--secondary }
+[Quick Setup](./get-started.md){ .md-button .md-button--primary } [Asset Store](https://assetstore.unity.com/packages/templates/systems/strategy-camera-controllers-370822){ .md-button .md-button--secondary }
 
 ---
 

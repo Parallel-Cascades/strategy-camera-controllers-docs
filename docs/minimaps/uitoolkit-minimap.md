@@ -10,8 +10,7 @@ The `Minimap UIToolkit` prefab provides a minimap built with Unity's UI Toolkit 
 Minimap UIToolkit
 ├── Minimap Camera          ← orthographic camera, renders to Minimap RT
 ├── Camera Frustum Box      ← LineRenderer showing the main camera's view area
-├── Minimap Document        ← UIDocument displaying Minimap RT
-└── EventSystem
+└── Minimap Document        ← UIDocument displaying Minimap RT
 ```
 
 ---
@@ -24,6 +23,8 @@ Minimap UIToolkit
 4. Remove the minimap layer from the main game camera's **Culling Mask** so the frustum box is invisible in the main view.
 5. Set the **Bound Camera** on `MinimapCameraBinderUIToolkit` to your game camera controller.
 6. Set the **Camera** on `MinimapFrustumBox` to your main game camera.
+
+Note that UIToolkit does not require an EventSystem present in the scene to register pointer events on the UI, unlike UGUI.
 
 ---
 

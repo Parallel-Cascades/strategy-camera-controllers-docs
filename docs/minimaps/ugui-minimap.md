@@ -11,8 +11,7 @@ Minimap UGUI
 ├── Minimap Camera          ← orthographic camera, renders to Minimap RT
 ├── Camera Frustum Box      ← LineRenderer showing the main camera's view area
 └── UI Canvas
-│   └── Minimap Image       ← UGUI Image displaying Minimap RT
-└── EventSystem
+    └── Minimap Image       ← UGUI Image displaying Minimap RT
 ```
 
 ---
@@ -25,6 +24,7 @@ Minimap UGUI
 4. Remove the minimap layer from the main game camera's **Culling Mask** so the frustum box is invisible in the main view.
 5. Set the **Bound Camera** on `MinimapCameraBinderUGUI` to your game camera controller.
 6. Set the **Camera** on `MinimapFrustumBox` to your main game camera.
+7. Ensure an [EventSystem](https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/EventSystem.html) is present in the scene. It is added automatically when you add a Canvas UI object — if one isn't already present, add it via **GameObject > UI > EventSystem**.
 
 ---
 
